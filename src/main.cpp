@@ -3,16 +3,21 @@
 #include "Agrumino.h"
 #include "config.h"
 #include "mini-iot-client.h"
+#define TIMESLEEP 3600  ///time in second
+#define DEVICENAME "Your Agrumino name" //insert your agrumino name
+#define SERIALBAUD 115200
+
 
 Agrumino agrumino;
-MiniIotClient miniIot("lifely01", MINI_IOT_SERVER, WIFI_SSID, WIFI_PASS);
+MiniIotClient miniIot(DEVICENAME, MINI_IOT_SERVER, WIFI_SSID, WIFI_PASS);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(SERIALBAUD);
   agrumino.setup();
 }
 
 void loop() {
+  agrumino.turnBoardOn();
   float c = agrumino.readTempC();
   float s = agrumino.readSoil();
   float sr = agrumino.readSoilRaw();
@@ -33,5 +38,5 @@ void loop() {
     agrumino.turnLedOff();
   }
 
-  agrumino.deepSleepSec(3600);
+  agrumino.deepSleepSec(TIMESLEEP);
 }
