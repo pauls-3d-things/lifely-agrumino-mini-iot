@@ -64,7 +64,7 @@ Agrumino::Agrumino() {
 void Agrumino::setup() {
   setupGpioModes();
   printLogo();
-  turnBoardOn(); // Comment to have the board off by Default
+  // turnBoardOn(); // Comment to have the board off by Default
 }
 
 void Agrumino::deepSleepSec(unsigned int sec) {

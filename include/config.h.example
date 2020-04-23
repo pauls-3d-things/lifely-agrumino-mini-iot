@@ -1,9 +1,10 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#define DEVICENAME "YourDeviceName" //insert your agrumino name (a-zA-Z only!)
 #define WIFI_SSID "<YOUR-WIFI>"
 #define WIFI_PASS "<YOUR-PASSWORD>"
 
 #define MINI_IOT_SERVER "your.ip.add.ress:port"
 
-#endifjjjj qq
+#endif
