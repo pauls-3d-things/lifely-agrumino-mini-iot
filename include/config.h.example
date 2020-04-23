@@ -1,0 +1,9 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define WIFI_SSID "<YOUR-WIFI>"
+#define WIFI_PASS "<YOUR-PASSWORD>"
+
+#define MINI_IOT_SERVER "your.ip.add.ress:port"
+
+#endif
